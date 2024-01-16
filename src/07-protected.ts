@@ -1,4 +1,4 @@
-export class Animal {
+export abstract class Animal {
     constructor(
         protected name: string,
         protected age: number,
@@ -28,6 +28,6 @@ export class Dog extends Animal {
     }
 }
 
-const fifi = new Animal("Fifi", 2, 5);
+//const fifi = new Animal("Fifi", 2, 5);
 
 const max = new Dog("Max", 3, 10);
