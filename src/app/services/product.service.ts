@@ -36,4 +36,8 @@ export class ProductMemoryService {
   findOne(id: Product["id"]){
     return this.product.find(item => item.id === id);
   }
+
+  get all(){
+    return this.product;
+  }
 }
