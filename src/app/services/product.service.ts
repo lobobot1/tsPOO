@@ -1,8 +1,9 @@
 import { Product } from "../models/product.model";
 import { CreateProductDto, UpdateProductDto } from "../dto/product.dto";
 import { faker } from "@faker-js/faker";
+import { ProductService } from "../models/product-service.nodel";
 
-export class ProductMemoryService {
+export class ProductMemoryService implements ProductService {
   private product: Product[] = [];
 
   create(data: CreateProductDto) {
@@ -37,7 +38,7 @@ export class ProductMemoryService {
     return this.product.find(item => item.id === id);
   }
 
-  get all(){
+  getAll(){
     return this.product;
   }
 }
